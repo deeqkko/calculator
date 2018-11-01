@@ -20,9 +20,22 @@ namespace calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string onScreen;
+        public string onMem;
+        public string calcOperator;
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Number_Click(object sender, RoutedEventArgs e)
+        {
+            
+            NumberField.Text = onScreen;
+
+        }
+
+        
     }
 }
