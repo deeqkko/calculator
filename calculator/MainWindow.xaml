@@ -12,23 +12,23 @@
             <ColumnDefinition Width="14*"/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="NumberField" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="62" Width="420" FontSize="48" Grid.ColumnSpan="2"/>
-        <Button x:Name="Clear" Content="CE" HorizontalAlignment="Left" Margin="10,386,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36"/>
-        <Button x:Name="Zero" Content="0" HorizontalAlignment="Left" Margin="95,386,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36"/>
-        <Button x:Name="Decimal" Content="." HorizontalAlignment="Left" Margin="180,386,0,0" VerticalAlignment="Top" Width="80" Height="80" RenderTransformOrigin="2.436,0.462" FontSize="48"/>
+        <Button x:Name="Clear" Content="CE" HorizontalAlignment="Left" Margin="10,386,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Clear_Click"/>
+        <Button x:Name="Zero" Content="0" HorizontalAlignment="Left" Margin="95,386,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
+        <Button x:Name="Decimal" Content="." HorizontalAlignment="Left" Margin="180,386,0,0" VerticalAlignment="Top" Width="80" Height="80" RenderTransformOrigin="2.436,0.462" FontSize="48" Click="Decimal_Click"/>
         <Button x:Name="One"  Content="1" HorizontalAlignment="Left" Margin="10,301,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
-        <Button x:Name="Four" Content="4" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36"/>
-        <Button x:Name="Seven" Content="7" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36"/>
-        <Button x:Name="Two" Content="2" HorizontalAlignment="Left" Margin="95,301,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36"/>
-        <Button x:Name="Five" Content="5" HorizontalAlignment="Left" Margin="95,216,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36"/>
-        <Button x:Name="Eight" Content="8" HorizontalAlignment="Left" Margin="95,131,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36"/>
-        <Button x:Name="Three" Content="3" HorizontalAlignment="Left" Margin="180,301,0,0" VerticalAlignment="Top" Width="80" Height="80" RenderTransformOrigin="1.36,-0.506" FontSize="36"/>
-        <Button x:Name="Six" Content="6" HorizontalAlignment="Left" Margin="180,216,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36"/>
-        <Button x:Name="Nine" Content="9" HorizontalAlignment="Left" Margin="180,131,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36"/>
-        <Button x:Name="Divide" Content="/" HorizontalAlignment="Left" Margin="265,386,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36"/>
-        <Button x:Name="Multiply" Content="x" HorizontalAlignment="Left" Margin="265,301,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36"/>
-        <Button x:Name="Subtract" Content="-" HorizontalAlignment="Left" Margin="265,216,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36"/>
-        <Button x:Name="Sum" Content="+" HorizontalAlignment="Left" Margin="265,131,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="48"/>
-        <Button x:Name="Equals" Content="=" HorizontalAlignment="Left" Margin="19,131,0,0" VerticalAlignment="Top" Width="80" Height="335" FontSize="36" Grid.Column="1" />
+        <Button x:Name="Four" Content="4" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
+        <Button x:Name="Seven" Content="7" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
+        <Button x:Name="Two" Content="2" HorizontalAlignment="Left" Margin="95,301,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
+        <Button x:Name="Five" Content="5" HorizontalAlignment="Left" Margin="95,216,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
+        <Button x:Name="Eight" Content="8" HorizontalAlignment="Left" Margin="95,131,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
+        <Button x:Name="Three" Content="3" HorizontalAlignment="Left" Margin="180,301,0,0" VerticalAlignment="Top" Width="80" Height="80" RenderTransformOrigin="1.36,-0.506" FontSize="36" Click="Number_Click"/>
+        <Button x:Name="Six" Content="6" HorizontalAlignment="Left" Margin="180,216,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
+        <Button x:Name="Nine" Content="9" HorizontalAlignment="Left" Margin="180,131,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
+        <Button x:Name="Divide" Content="/" HorizontalAlignment="Left" Margin="265,386,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36" Click="Divide_Click"/>
+        <Button x:Name="Multiply" Content="x" HorizontalAlignment="Left" Margin="265,301,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36" Click="Multiply_Click"/>
+        <Button x:Name="Subtract" Content="-" HorizontalAlignment="Left" Margin="265,216,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36" Click="Subtract_Click"/>
+        <Button x:Name="Sum" Content="+" HorizontalAlignment="Left" Margin="265,131,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="48" Click="Sum_Click"/>
+        <Button x:Name="Equals" Content="=" HorizontalAlignment="Left" Margin="19,131,0,0" VerticalAlignment="Top" Width="80" Height="335" FontSize="36" Grid.Column="1" Click="Equals_Click" />
 
     </Grid>
 </Window>
