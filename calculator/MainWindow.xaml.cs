@@ -26,41 +26,48 @@ namespace calculator
         public float oper1;
         public float oper2;
         public bool isComma = false;
+        public bool afterEqualorClear = false;
         
 
 
         public MainWindow()
         {
             InitializeComponent();
-            onScreen = "";
+            onScreen = "0";
+            afterEqualorClear = true;
             NumberField.Text = onScreen;
         }
 
 
         private void Number_Click(object sender, RoutedEventArgs e)
         {
-            onScreen += sender.ToString()[sender.ToString().Length -1].ToString();
+            if (afterEqualorClear == true)
+            {
+                onScreen = sender.ToString()[sender.ToString().Length - 1].ToString();
+                afterEqualorClear = false;
+            }
+            else
+            {
+                onScreen += sender.ToString()[sender.ToString().Length - 1].ToString();
+            }
             NumberField.Text = onScreen; 
  
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
-            onScreen = "";
+            onScreen = "0";
+            afterEqualorClear = true;
+            isComma = false;
             NumberField.Text = onScreen;
         }
 
-        private void Sum_Click(object sender, RoutedEventArgs e)
-        {
-            onMem = onScreen;
-            onScreen = "";
-            NumberField.Text = onScreen;
-            calcOperator = 1;
-            isComma = false;
-        }
+       
 
         private void Equals_Click(object sender, RoutedEventArgs e)
         {
+            afterEqualorClear = true;
+            isComma = false;
             float.TryParse(onScreen, out oper2);
             float.TryParse(onMem, out oper1);
             Console.WriteLine(oper1);
@@ -68,65 +75,50 @@ namespace calculator
             if (calcOperator == 1)
             {
                 Console.WriteLine("Adding...");
-                onScreen = (oper1 + oper2).ToString();
-                calcOperator = 0;
-                NumberField.Text = onScreen;
+                onScreen = (oper1 + oper2).ToString(); 
             }
             else if (calcOperator == 2)
             {
                 Console.WriteLine("Subtracting...");
-                onScreen = (oper1 - oper2).ToString();
-                calcOperator = 0;
-                NumberField.Text = onScreen;
+                onScreen = (oper1 - oper2).ToString();              
             }
 
             else if (calcOperator == 3)
             {
                 Console.WriteLine("Multiplying...");
-                onScreen = (oper1 * oper2).ToString();
-                calcOperator = 0;
-                NumberField.Text = onScreen;
+                onScreen = (oper1 * oper2).ToString();  
             }
 
-            else
+            else if (calcOperator == 4)
             {
                 Console.WriteLine("Dividing...");
-                onScreen = (oper1 / oper2).ToString();
-                calcOperator = 0;
+                onScreen = (oper1 / oper2).ToString();  
+            }
+            else
+            {
                 NumberField.Text = onScreen;
             }
+            calcOperator = 0;
+            NumberField.Text = onScreen;
         }
 
-        private void Subtract_Click(object sender, RoutedEventArgs e)
+        private void Operator_Click(object sender, RoutedEventArgs e)
         {
             onMem = onScreen;
+            isComma = false;
             onScreen = "";
             NumberField.Text = onScreen;
-            calcOperator = 2;
-            isComma = false;
-        }
-
-        private void Multiply_Click(object sender, RoutedEventArgs e)
-        {
-            onMem = onScreen;
-            onScreen = "";
-            NumberField.Text = onScreen;
-            calcOperator = 3;
-            isComma = false;
-        }
-
-        private void Divide_Click(object sender, RoutedEventArgs e)
-        {
-            onMem = onScreen;
-            onScreen = "";
-            NumberField.Text = onScreen;
-            calcOperator = 4;
-            isComma = false;
+            Console.WriteLine(sender.ToString()[sender.ToString().Length - 1].ToString());
+            if (sender.ToString()[sender.ToString().Length - 1].ToString() == "+") { calcOperator = 1; }
+            else if (sender.ToString()[sender.ToString().Length - 1].ToString() == "-") { calcOperator = 2; }
+            else if (sender.ToString()[sender.ToString().Length - 1].ToString() == "x") { calcOperator = 3; }
+            else if (sender.ToString()[sender.ToString().Length - 1].ToString() == "/") { calcOperator = 4; }
+            else { calcOperator = 0; }
         }
 
         private void Decimal_Click(object sender, RoutedEventArgs e)
         {
-            if (NumberField.Text != "" && isComma == false)
+            if (isComma == false)
             {
                 onScreen += ",";
                 isComma = true;

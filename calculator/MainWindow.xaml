@@ -24,10 +24,10 @@
         <Button x:Name="Three" Content="3" HorizontalAlignment="Left" Margin="180,301,0,0" VerticalAlignment="Top" Width="80" Height="80" RenderTransformOrigin="1.36,-0.506" FontSize="36" Click="Number_Click"/>
         <Button x:Name="Six" Content="6" HorizontalAlignment="Left" Margin="180,216,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
         <Button x:Name="Nine" Content="9" HorizontalAlignment="Left" Margin="180,131,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="36" Click="Number_Click"/>
-        <Button x:Name="Divide" Content="/" HorizontalAlignment="Left" Margin="265,386,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36" Click="Divide_Click"/>
-        <Button x:Name="Multiply" Content="x" HorizontalAlignment="Left" Margin="265,301,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36" Click="Multiply_Click"/>
-        <Button x:Name="Subtract" Content="-" HorizontalAlignment="Left" Margin="265,216,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36" Click="Subtract_Click"/>
-        <Button x:Name="Sum" Content="+" HorizontalAlignment="Left" Margin="265,131,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="48" Click="Sum_Click"/>
+        <Button x:Name="Divide" Content="/" HorizontalAlignment="Left" Margin="265,386,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36" Click="Operator_Click"/>
+        <Button x:Name="Multiply" Content="x" HorizontalAlignment="Left" Margin="265,301,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36" Click="Operator_Click"/>
+        <Button x:Name="Subtract" Content="-" HorizontalAlignment="Left" Margin="265,216,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="36" Click="Operator_Click"/>
+        <Button x:Name="Sum" Content="+" HorizontalAlignment="Left" Margin="265,131,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.ColumnSpan="2" FontSize="48" Click="Operator_Click"/>
         <Button x:Name="Equals" Content="=" HorizontalAlignment="Left" Margin="19,131,0,0" VerticalAlignment="Top" Width="80" Height="335" FontSize="36" Grid.Column="1" Click="Equals_Click" />
 
     </Grid>
